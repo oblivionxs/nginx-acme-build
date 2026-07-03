@@ -89,13 +89,11 @@ jobs:
     strategy:
       matrix:
         include:
-          - os_name: Debian 11 (Bullseye)
-            os_tag: '11'
-          - os_name: Debian 12 (Bookworm)
-            os_tag: '12'
+          - os_name: Ubuntu 22.04 (jammy)
+            os_tag: '22.04'
 
     # Use the matrix variable to select the correct Docker container.
-    container: debian:${{ matrix.os_tag }}
+    container: ubuntu:${{ matrix.os_tag }}
 
     steps:
       - name: Checkout Repository
