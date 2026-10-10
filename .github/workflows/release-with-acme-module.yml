@@ -91,6 +91,8 @@ jobs:
         include:
           - os_name: Ubuntu 22.04 (jammy)
             os_tag: '22.04'
+          - os_name: Ubuntu 26.04
+            os_tag: '26.04'
 
     # Use the matrix variable to select the correct Docker container.
     container: ubuntu:${{ matrix.os_tag }}
